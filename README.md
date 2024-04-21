@@ -29,12 +29,16 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_commons"></a> [commons](#input\_commons) | Common resource tags. | `map` | <pre>{<br>  "account_id": "",<br>  "email": ""<br>}</pre> | no |
-| <a name="input_prefix_name"></a> [prefix\_name](#input\_prefix\_name) | Resource name common prefix. | `string` | `""` | no |
+| <a name="input_creator_id"></a> [creator\_id](#input\_creator\_id) | Resource account name creator. | `string` | n/a | yes |
+| <a name="input_environment"></a> [environment](#input\_environment) | Solution environment type. | `string` | n/a | yes |
+| <a name="input_powered_by"></a> [powered\_by](#input\_powered\_by) | Created by. | `string` | `"terraform"` | no |
+| <a name="input_prefix_name"></a> [prefix\_name](#input\_prefix\_name) | Resource name. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_commons"></a> [commons](#output\_commons) | n/a |
-| <a name="output_prefix_name"></a> [prefix\_name](#output\_prefix\_name) | n/a |
+| <a name="output_creator_id"></a> [creator\_id](#output\_creator\_id) | Resource account name creator. |
+| <a name="output_environment"></a> [environment](#output\_environment) | Solution environment type. |
+| <a name="output_powered_by"></a> [powered\_by](#output\_powered\_by) | Created by. |
+| <a name="output_prefix_name"></a> [prefix\_name](#output\_prefix\_name) | Resource name. |
