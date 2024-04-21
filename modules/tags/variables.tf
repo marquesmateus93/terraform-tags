@@ -8,7 +8,7 @@ variable "prefix_name" {
         var.prefix_name
       )
     )
-    error_message = "Just uppercase and hifen are allowed."
+    error_message = "The Prefix Name must contain just lowercase and hyphens."
   }
 }
 
@@ -35,8 +35,12 @@ variable "creator_id" {
         "[A-Za-z0-9_]",
         var.creator_id
       )
-    ) && length(var.creator_id) == 21
-    error_message = "AWS UserID doesn't match."
+    )
+    error_message = "The UserID must contain just uppercase, lowercase, hyphen and underscore."
+  }
+  validation {
+    condition = length(var.creator_id) == 21
+    error_message = "The length must be less or equal than 21 characters."
   }
 }
 
