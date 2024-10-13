@@ -32,16 +32,12 @@ variable "creator_id" {
   validation {
     condition = can(
       regex(
-        "[A-Za-z0-9_]{21}[:a-z]{1,}.[a-z]{1,}",
+        "[A-Za-z0-9_]{21}([:a-z]{1,}.[a-z]{1,})?",
         var.creator_id
       )
     )
     error_message = "The UserID must contain just uppercase, lowercase, hyphen and underscore."
   }
-#   validation {
-#     condition = length(var.creator_id) == 21
-#     error_message = "The length must be less or equal than 21 characters."
-#   }
 }
 
 variable "powered_by" {
